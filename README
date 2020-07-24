@@ -1,0 +1,7 @@
+Practice app.
+
+Based on https://youtu.be/yemZz8FgAgQ.
+
+Liquibase to enable several versions of DB. 
+It's helpful to create and use tests of DB and final version of DB
+in one place. 

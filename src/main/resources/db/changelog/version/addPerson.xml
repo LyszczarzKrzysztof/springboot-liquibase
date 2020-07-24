@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet  author="kl"  id="2">
+        <insert  schemaName="public"
+                 tableName="person">
+            <column  name="address"  value="Jana Pawła II"/>
+        </insert>
+    </changeSet>
+
+    <!--    rolback włącza się wtedy gdy cos pójdzie nie tak i wtedy usuwa tabelę chyba :D-->
+<!--    <changeSet  id="2" author="kl">-->
+<!--        <rollback>-->
+<!--            <dropTable tableName="person"/>-->
+<!--        </rollback>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>
