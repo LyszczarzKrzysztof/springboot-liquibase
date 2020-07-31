@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <changeSet  id="1" author="kl">
-        <createTable  remarks="A String"
-                      schemaName="public"
-                      tableName="person"
-                      tablespace="A String">
+<!--        Poniżej - w poprzedniej wersji nie działało
+            bo było jeszcze  schemaName="public" w createTable a w mysql nie mogło tego być bo schema juz byla ustawiona
+            example_db -->
+        <createTable tableName="person">
             <column  name="address"  type="varchar(255)"/>
         </createTable>
     </changeSet>

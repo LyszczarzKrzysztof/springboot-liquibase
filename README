@@ -5,3 +5,14 @@ Based on https://youtu.be/yemZz8FgAgQ.
 Liquibase to enable several versions of DB. 
 It's helpful to create and use tests of DB and final version of DB
 in one place. 
+
+Running app in two ways:
+- dev: 
+    Run -> Edit Configurations -> VM Options = -Dspring.profiles.active=dev
+        main class = com.example.springbootliquibase.SpringbootLiquibaseApplication
+        runs app in dev mode with H2 DB with data created for tests - spring recognizes actove profile from VM options,
+        
+- prod: add new Configuration: "+" -> Springboot ->
+    Run -> Edit Configurations -> VM Options = -Dspring.profiles.active=prod
+            main class = com.example.springbootliquibase.SpringbootLiquibaseApplication
+            runs app in prod mode with MySQL DB  - spring recognizes actove profile from VM options,
